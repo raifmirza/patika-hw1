@@ -6,11 +6,14 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@AllArgsConstructor
+
 @Getter
 @Setter
 @ToString
 public class Villa extends BaseStructure{
     private boolean hasGarden;
-    private boolean hasGarage;
+    public Villa(Integer roomNumber, Integer squareMeter, Integer loungeNumber,Integer price,boolean hasGarden){
+        super(roomNumber,squareMeter,loungeNumber,price);
+        this.hasGarden=hasGarden;
+    }
 }

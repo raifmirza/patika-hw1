@@ -10,10 +10,9 @@ import java.math.BigDecimal;
 @Setter
 @ToString
 public class BaseStructure {
-    private String name;
     private Integer roomNumber;
-    private Double squareMeter;
-    private String address;
-    private BigDecimal price;
+    private Integer squareMeter;
+    private Integer loungeNumber;
+    private Integer price;
 
 }
