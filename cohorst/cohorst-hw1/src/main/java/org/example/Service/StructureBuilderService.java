@@ -23,7 +23,7 @@ public class StructureBuilderService {
         flatList.add(new Flat(2,1003,2,100000,1));
         resortList.add(new Resort(12,13212,4,250000,true));
         resortList.add(new Resort(15,11234,3,2750000,false));
-        resortList.add(new Resort(13,4343,2,450000,true));
+        resortList.add(new Resort(13,4343,6,450000,true));
         villaList.add(new Villa(23,7643,5,1250000,true));
         villaList.add(new Villa(28,76433,12,2250000,false));
         villaList.add(new Villa(13,8532,6,3250000,true));

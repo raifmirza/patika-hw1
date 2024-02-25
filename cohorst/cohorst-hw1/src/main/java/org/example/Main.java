@@ -23,6 +23,8 @@ public class Main {
         System.out.println("Resorts avg square meters: " + homeService.resortAvgSquareMeters());
         System.out.println("Villas avg square meters: " + homeService.villaAvgSquareMeters());
         System.out.println("Avg square meters: " + homeService.avgSquareMeters());
+        System.out.println("House withs 13 rooms and 6 lounges: " + homeService.filterByRoomAndLounge(13,6));
+
 
     }
 

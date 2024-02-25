@@ -4,7 +4,6 @@ import lombok.*;
 
 @Getter
 @Setter
-@ToString
 public class Resort extends BaseStructure{
     private boolean havePool;
     public Resort(Integer roomNumber, Integer squareMeter, Integer loungeNumber,Integer price,boolean havePool){

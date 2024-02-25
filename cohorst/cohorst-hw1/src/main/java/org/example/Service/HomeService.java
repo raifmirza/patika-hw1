@@ -1,8 +1,15 @@
 package org.example.Service;
 
+import org.example.Structures.BaseStructure;
 import org.example.Structures.Flat;
 import org.example.Structures.Resort;
 import org.example.Structures.Villa;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class HomeService{
     private BaseService<Flat> flatService;
@@ -44,6 +51,14 @@ public class HomeService{
     public Double avgSquareMeters(){
         return (flatAvgSquareMeters()+resortAvgSquareMeters()+villaAvgSquareMeters()) / 3;
     }
-
+    public List<BaseStructure> filterByRoomAndLounge(int roomNumber, int loungeNumber){
+        List<BaseStructure> filteredHouseList = new ArrayList<>();
+        for (BaseStructure home : Stream.of(builds.getFlatList(),builds.getResortList(),builds.getVillaList()).flatMap(Collection::stream).collect(Collectors.toList())) {
+            if (home.getLoungeNumber() == loungeNumber && home.getRoomNumber() == roomNumber) {
+                filteredHouseList.add(home);
+            }
+        }
+        return filteredHouseList;
+    }
 
 }

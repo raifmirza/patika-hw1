@@ -7,7 +7,6 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@ToString
 public class Flat extends BaseStructure{
     private int floorNumber;
     public Flat(Integer roomNumber,
